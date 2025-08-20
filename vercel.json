@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/web/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "apps/api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/api/products$",
+      "dest": "apps/api/products.js"
+    },
+    {
+      "src": "^/api/orders$",
+      "dest": "apps/api/orders.js"
+    },
+    {
+      "src": "^/api/orders/(.*)$",
+      "dest": "apps/api/orders/[id].js"
+    },
+    {
+      "src": "^/api/setup$",
+      "dest": "apps/api/setup.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "apps/web/$1"
+    }
+  ]
+}
