@@ -31,6 +31,9 @@
       "src": "^/assets/(.*)$",
       "dest": "apps/web/assets/$1"
     },
+    { "src": "^/api/clear-products$",
+      "dest": "apps/api/clear-products.js" }
+
     {
       "src": "/(.*)",
       "dest": "apps/web/$1"
