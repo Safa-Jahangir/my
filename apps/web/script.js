@@ -1,4 +1,4 @@
-const API_BASE = `http://${location.hostname}:5000`;
+const API_BASE = "";
 
 // --- Create HTML element ---
 function el(html) {
@@ -119,7 +119,7 @@ updateCartCount();
 // --- Load Products from Server ---
 async function loadProducts() {
   try {
-    const res = await fetch(`${API_BASE}/products`);
+    const res = await fetch(`/api/products`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const products = await res.json();
 
@@ -179,11 +179,11 @@ if (form) {
     data.cart = cart;
 
     try {
-      const res = await fetch(`${API_BASE}/checkout`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
+      const res = await fetch(`/api/orders`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data)
+});
 
       const result = await res.json();
 
