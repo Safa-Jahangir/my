@@ -33,21 +33,6 @@ module.exports = async (req, res) => {
     if (parseInt(rows[0].c) === 0) {
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-<<<<<<< HEAD
-        ['Red T-Shirt', 15.99, 'Comfortable cotton t-shirt', '/assets/product1.svg']
-      );
-      await db.query(
-        "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Blue Jeans', 29.99, 'Stylish denim jeans', '/assets/product2.svg']
-      );
-      await db.query(
-        "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Kids Sneakers', 24.5, 'Durable and comfy sneakers', '/assets/product3.svg']
-      );
-      await db.query(
-        "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['School Backpack', 18.75, 'Spacious backpack for kids', '/assets/product4.svg']
-=======
         ['Red T-Shirt', 15.99, 'Comfortable cotton t-shirt', '/assets/unnamed 1.png']
       );
       await db.query(
@@ -56,7 +41,7 @@ module.exports = async (req, res) => {
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Kids Sneakers', 24.5, 'Durable and comfy sneakers', '/assets/unnamed 3.png']
+        ['Kids Sneakers', 24.5, 'Durable and comfy sneakers', '/assets/image 3.jpeg']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
@@ -76,23 +61,21 @@ module.exports = async (req, res) => {
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Pink Ruffle Dress', 25.50, 'Light pink dress with a ruffled skirt6', '/assets/unnamed 8.png']
+        ['Pink Ruffle Dress', 25.50, 'Light pink dress with a ruffled skirt', '/assets/unnamed 8.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Floral A-Line Dress', 28.75, 'A cute floral dress,having summer vibes', '/assets/unnamed 9.png']
+        ['Floral A-Line Dress', 28.75, 'A cute floral dress, having summer vibes', '/assets/unnamed 9.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
         ['Unicorn Onesie', 19.99, 'Soft, pastel pink onesie with a small, embroidered unicorn', '/assets/unnamed 10.png']
->>>>>>> aa3d53d (update assets)
       );
     }
 
     return res.status(200).json({ message: 'OK' });
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ message: 'DB error', error: e.message });
+    return res.status(500).json({ message: 'DB error', error: e.message, stack: e.stack });
   }
 };
-
