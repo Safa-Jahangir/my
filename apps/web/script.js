@@ -131,6 +131,7 @@ async function loadProducts() {
     products.forEach(p => {
       const card = el(`
         <div class="card product-card">
+        <img src="${p.image}" alt="${p.name}" class="product-img" />
           <h3>${p.name}</h3>
           <div class="price">$${p.price}</div>
           <button class="btn primary">Add to cart</button>
