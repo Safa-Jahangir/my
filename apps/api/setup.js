@@ -33,43 +33,43 @@ module.exports = async (req, res) => {
     if (parseInt(rows[0].c) === 0) {
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Red T-Shirt', 15.99, 'Comfortable cotton t-shirt', '/assets/unnamed 1.png']
+        ['Red T-Shirt', 15.99, 'Comfortable cotton t-shirt', '/assets/unnamed-1.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Blue Jeans', 29.99, 'Stylish denim jeans', '/assets/unnamed 2.png']
+        ['Blue Jeans', 29.99, 'Stylish denim jeans', '/assets/unnamed-2.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Kids Sneakers', 24.5, 'Durable and comfy sneakers', '/assets/image 3.jpeg']
+        ['Kids Sneakers', 24.5, 'Durable and comfy sneakers', '/assets/image-3.jpeg']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Striped Hoodie', 18.75, 'Cozy hooded sweatshirt with classic stripes', '/assets/unnamed 4.png']
+        ['Striped Hoodie', 18.75, 'Cozy hooded sweatshirt with classic stripes', '/assets/unnamed-4.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Cargo Shorts', 16.99, 'Practical shorts with side pockets', '/assets/unnamed 5.png']
+        ['Cargo Shorts', 16.99, 'Practical shorts with side pockets', '/assets/unnamed-5.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Summer Dress', 19.25, 'Lightweight floral dress for sunny days', '/assets/unnamed 6.png']
+        ['Summer Dress', 19.25, 'Lightweight floral dress for sunny days', '/assets/unnamed-6.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Rain Jacket', 35.00, 'Waterproof jacket with a vibrant print', '/assets/unnamed 7.png']
+        ['Rain Jacket', 35.00, 'Waterproof jacket with a vibrant print', '/assets/unnamed-7.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Pink Ruffle Dress', 25.50, 'Light pink dress with a ruffled skirt', '/assets/unnamed 8.png']
+        ['Pink Ruffle Dress', 25.50, 'Light pink dress with a ruffled skirt', '/assets/unnamed-8.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Floral A-Line Dress', 28.75, 'A cute floral dress, having summer vibes', '/assets/unnamed 9.png']
+        ['Floral A-Line Dress', 28.75, 'A cute floral dress, having summer vibes', '/assets/unnamed-9.png']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Unicorn Onesie', 19.99, 'Soft, pastel pink onesie with a small, embroidered unicorn', '/assets/unnamed 10.png']
+        ['Unicorn Onesie', 19.99, 'Soft, pastel pink onesie with a small, embroidered unicorn', '/assets/unnamed-10.png']
       );
     }
 
