@@ -41,7 +41,7 @@ module.exports = async (req, res) => {
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
-        ['Kids Sneakers', 24.5, 'Durable and comfy sneakers', '/assets/image-3.jpeg']
+        ['Kids Sneakers', 24.5, 'Durable and comfy sneakers', 'https://tse3.mm.bing.net/th/id/OIP.ptZbsYTaZU7xLa-0Kk5dIQHaHa?pid=Api&P=0&h=220']
       );
       await db.query(
         "INSERT INTO products (name, price, description, image) VALUES ($1,$2,$3,$4)",
